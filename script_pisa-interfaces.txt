@@ -1,0 +1,11 @@
+#!/bin/bash
+cd /home/sbl/crystal-project/interfaces/
+
+for file in *; do
+echo "/home/sbl/Downloads/ccp4-7.0/bin/pisa $file -detail interfaces " $1 " /home/sbl/Downloads/ccp4-7.0/pisa.cfg >>/home/sbl/interfaces2/$file"
+awk '{FS="|"}{split($4,a," ");if(a[3]!="" && a[3]>0 && a[3]<=10){split($1,b," "); system(echo "/home/sbl/Downloads/ccp4-7.0/bin/pisa '$file' -detail interfaces " b[1] " /home/sbl/Downloads/ccp4-7.0/pisa.cfg >>/home/sbl/interfaces2/'$file'")}}'  $file
+
+done
+
+
+
