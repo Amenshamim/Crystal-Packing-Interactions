@@ -18,7 +18,7 @@ import java.util.regex.*;
  *
  * @author d-precision-t1700
  */
-public class crytsal {
+public class crystal {
     
     
     public static void main(String[] args) throws IOException 
