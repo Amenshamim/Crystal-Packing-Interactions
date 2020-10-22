@@ -1,9 +1,9 @@
 #!/bin/bash
-cd /home/d-precision-t1700/Amen/B-interfaces/
+cd /.././B-interfaces/
 for file in *; do
-mkdir /home/d-precision-t1700/Amen/B-results/$file
-cd /home/d-precision-t1700/Amen/B-results/$file/
-csplit --digits=2  --quiet --prefix=$file"-" /home/d-precision-t1700/Amen/B-interfaces/$file "/PISA v.2.1.1/" "{*}"
+mkdir /.././B-results/$file
+cd /.././B-results/$file/
+csplit --digits=2  --quiet --prefix=$file"-" /.././B-interfaces/$file "/PISA v.2.1.1/" "{*}"
 rm $file"-00"
-cd /home/d-precision-t1700/Amen/B-results/
+cd /.././B-results/
 done
