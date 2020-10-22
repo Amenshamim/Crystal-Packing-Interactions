@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tcga;
+package crystal_packing_interaction;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -16,7 +16,7 @@ import java.util.regex.*;
 //import org.apache.commons.lang3.StringUtils;
 /**
  *
- * @author d-precision-t1700
+ * @author Intel(R) Xeon(R) CPU E5-2640 v4 (2.40GHz) 10 core processor 
  */
 public class crystal {
     
