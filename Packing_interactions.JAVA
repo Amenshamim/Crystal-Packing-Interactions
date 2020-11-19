@@ -34,7 +34,7 @@ public class crystal {
         String[] columnDetail3 = null;
         boolean sticky = false;
         boolean blunt = false;
-        boolean type3A=false;
+        boolean Type3=false;
         boolean Type4=false;
         boolean non_DNA=false;
         boolean[] non_DNA_main=new boolean[2];
@@ -211,7 +211,7 @@ public class crystal {
                         {
                             System.out.println( RNA+" "+RNB+" blunt N-N  H-N N-H");
                             br3.write(RNA+" "+RNB+" Typ3A"+"\n");
-                            type3A=true;
+                            Type3=true;
                             RNA=0;
                             RNB=0;
                             
@@ -221,7 +221,7 @@ public class crystal {
                         else
                         {
                             sticky=false;
-                            type3A=false;
+                            Type3=false;
                         }
                                 
                     }
@@ -295,87 +295,87 @@ public class crystal {
          System.out.println(non_DNA+"   non_DNA");
          System.out.println(blunt+"   bbbb");
          System.out.println(sticky+"   ssssssssss");
-         System.out.println(type3A+"   3AAAAAAAAAA");
+         System.out.println(Type3+"   3AAAAAAAAAA");
          System.out.println(Type4+"   3BBBBBBBBBBB");
-          if(sticky==true && blunt==false && non_DNA==false && type3A==false && Type4==false)
+          if(sticky==true && blunt==false && non_DNA==false && Type3==false && Type4==false)
          {
              System.out.println("sticky");
              br3.write("Type1"+"\n");
              br4.write(name+"\tType1"+"\n");
          }
-         else if(sticky==true && blunt==true && non_DNA==false && type3A==false && Type4==false)
+         else if(sticky==true && blunt==true && non_DNA==false && Type3==false && Type4==false)
          {
              System.out.println("sticky+blunt");
              br3.write("Type1+Type2"+"\n");
              br4.write(name+"\tType1\n");
          }
-         else if(sticky==true && blunt==true && non_DNA==false && type3A==true && Type4==true)
+         else if(sticky==true && blunt==true && non_DNA==false && Type3==true && Type4==true)
          {
              System.out.println("sticky+blunt");
-             br3.write("Type1+Type2+ Type3A+Type4"+"\n");
+             br3.write("Type1+Type2+ Type3+Type4"+"\n");
              br4.write(name+"\tType1\n");
          }
-         else if(sticky==true && blunt==true && non_DNA==false && type3A==true && Type4==false)
+         else if(sticky==true && blunt==true && non_DNA==false && Type3==true && Type4==false)
          {
              System.out.println("sticky+blunt");
-             br3.write("Type1+Type2+ Type3A"+"\n");
+             br3.write("Type1+Type2+ Type3"+"\n");
              br4.write(name+"\tType1\n");
          }
-         else if(sticky==true && blunt==true && non_DNA==false && type3A==false && Type4==true)
+         else if(sticky==true && blunt==true && non_DNA==false && Type3==false && Type4==true)
          {
              System.out.println("sticky+blunt");
              br3.write("Type1+Type2+Type4"+"\n");
              br4.write(name+"\tType1\n");
          }
-         else if(sticky==true && blunt==false && non_DNA==false && type3A==true && Type4==true)
+         else if(sticky==true && blunt==false && non_DNA==false && Type3==true && Type4==true)
          {
              System.out.println("sticky+blunt");
-             br3.write("Type1+ Type3A+Type4"+"\n");
+             br3.write("Type1+ Type3+Type4"+"\n");
              br4.write(name+"\tType1\n");
          }
-         else if(sticky==true && blunt==false && non_DNA==false && type3A==false && Type4==true)
+         else if(sticky==true && blunt==false && non_DNA==false && Type3==false && Type4==true)
          {
              System.out.println("sticky+blunt");
              br3.write("Type1+Type4"+"\n");
              br4.write(name+"\tType1\n");
          }
-         else if(sticky==true && blunt==false && non_DNA==false && type3A==true && Type4==false)
+         else if(sticky==true && blunt==false && non_DNA==false && Type3==true && Type4==false)
          {
              System.out.println("sticky+blunt");
-             br3.write("Type1+ Type3A"+"\n");
+             br3.write("Type1+ Type3"+"\n");
              br4.write(name+"\tType1\n");
          }
-         else if(sticky==false && blunt==true && non_DNA==false && type3A==true && Type4==true)
+         else if(sticky==false && blunt==true && non_DNA==false && Type3==true && Type4==true)
          {
              System.out.println("blunt");
-             br3.write("Type2+Type3A+Type4"+"\n");
+             br3.write("Type2+Type3+Type4"+"\n");
              br4.write(name+"\tType2"+"\n");
          }
-         else if(sticky==false && blunt==true && non_DNA==false && type3A==true && Type4==false)
+         else if(sticky==false && blunt==true && non_DNA==false && Type3==true && Type4==false)
          {
              System.out.println("blunt");
-             br3.write("Type2+Type3A"+"\n");
+             br3.write("Type2+Type3"+"\n");
              br4.write(name+"\tType2"+"\n");
          }
-         else if(sticky==false && blunt==true && non_DNA==false && type3A==false && Type4==true)
+         else if(sticky==false && blunt==true && non_DNA==false && Type3==false && Type4==true)
          {
              System.out.println("blunt");
              br3.write("Type2+Type4"+"\n");
              br4.write(name+"\tType2"+"\n");
          }
-         else if(sticky==false && blunt==false && non_DNA==false && type3A==true && Type4==true)
+         else if(sticky==false && blunt==false && non_DNA==false && Type3==true && Type4==true)
          {
              System.out.println("blunt");
-             br3.write("Type3A+Type4"+"\n");
-             br4.write(name+"\tType3A"+"\n");
+             br3.write("Type3+Type4"+"\n");
+             br4.write(name+"\tType3"+"\n");
          }
-         else if(sticky==false && blunt==false && non_DNA==false && type3A==true && Type4==false)
+         else if(sticky==false && blunt==false && non_DNA==false && Type3==true && Type4==false)
          {
              System.out.println("blunt");
-             br3.write("Type3A"+"\n");
-             br4.write(name+"\tType3A"+"\n");
+             br3.write("Type3"+"\n");
+             br4.write(name+"\tType3"+"\n");
          }
-         else if(sticky==false && blunt==false && non_DNA==false && type3A==false && Type4==true)
+         else if(sticky==false && blunt==false && non_DNA==false && Type3==false && Type4==true)
          {
              System.out.println("blunt");
              br3.write("Type4"+"\n");
@@ -386,37 +386,37 @@ public class crystal {
            br3.write( "sticky+ligand\n");
            br4.write(name+ "\tType1\n");
          }
-         else if(non_DNA==true && sticky==false &&  blunt==true && type3A==true && Type4==true)
+         else if(non_DNA==true && sticky==false &&  blunt==true && Type3==true && Type4==true)
          {
-           br3.write( "blunt+Type3A+Type4 + ligand\n");
+           br3.write( "blunt+Type3+Type4 + ligand\n");
            br4.write(name+ "\tblunt+ligand\n");
          }
-         else if(non_DNA==true && sticky==false &&  blunt==true && type3A==true && Type4==false)
+         else if(non_DNA==true && sticky==false &&  blunt==true && Type3==true && Type4==false)
          {
-           br3.write( "Type2+Type3A+ligand\n");
+           br3.write( "Type2+Type3+ligand\n");
            br4.write(name+ "\tType2+ligand\n");
          }
-         else if(non_DNA==true && sticky==false &&  blunt==true && type3A==false && Type4==true)
+         else if(non_DNA==true && sticky==false &&  blunt==true && Type3==false && Type4==true)
          {
            br3.write( "Type2+Type4+ligand\n");
            br4.write(name+ "\tType2+ligand\n");
          }
-         else if(non_DNA==true && sticky==false &&  blunt==false && type3A==true && Type4==true)
+         else if(non_DNA==true && sticky==false &&  blunt==false && Type3==true && Type4==true)
          {
-           br3.write( "Type3A+Type4 + ligand\n");
-           br4.write(name+ "\tType3A+ligand\n");
+           br3.write( "Type3+Type4 + ligand\n");
+           br4.write(name+ "\tType3+ligand\n");
          }
-         else if(non_DNA==true && sticky==false &&  blunt==true && type3A==true && Type4==false)
+         else if(non_DNA==true && sticky==false &&  blunt==true && Type3==true && Type4==false)
          {
-           br3.write( " Type3A + ligand\n");
-           br4.write(name+ "\tType3A+ligand\n");
+           br3.write( " Type3 + ligand\n");
+           br4.write(name+ "\tType3+ligand\n");
          }
-         else if(non_DNA==true && sticky==false &&  blunt==true && type3A==false && Type4==true)
+         else if(non_DNA==true && sticky==false &&  blunt==true && Type3==false && Type4==true)
          {
            br3.write( " Type4 + ligand\n");
            br4.write(name+ "\tType4+ligand\n");
          }
-         else if(non_DNA==true && sticky==false && blunt==false && type3A==false && Type4==false )
+         else if(non_DNA==true && sticky==false && blunt==false && Type3==false && Type4==false )
          {
            br3.write( "ligand\n");
            br4.write(name+ "\tLigand\n");
